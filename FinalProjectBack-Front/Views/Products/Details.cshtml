@@ -1,0 +1,560 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+}
+@section CSS{
+    <link rel="stylesheet" href="~/assets/homeowlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/homeowlcarousel/owl.theme.default.min.css">
+}
+
+<section id="details">
+    <div class="container">
+        <div class="row">
+            <div class="images col-lg-6 col-md-6">
+                <div class="row detailsRowBigImage">
+                    <div class="bigImage">
+                        <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/4_a00b8fb0-5dd2-4ea8-8f3d-d458b9f72a18_720x.jpg?v=1605081140"
+                             alt="">
+                    </div>
+                </div>
+                <div class="row detailsRowSmallImage">
+                    <div class="smallImages">
+                        <div class="image img1">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/4_a00b8fb0-5dd2-4ea8-8f3d-d458b9f72a18_720x.jpg?v=1605081140"
+                                 alt="">
+                        </div>
+                        <div class="image">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/8_bba25afa-c02d-44d0-9929-5f7297260795_720x.jpg?v=1605081140"
+                                 alt="">
+                        </div>
+                        <div class="image">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/11_a90c335a-b212-4f3d-87e6-06c7efff31f7_720x.jpg?v=1605081140"
+                                 alt="">
+                        </div>
+                        <div class="image">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/2_5cba8588-668f-4f83-9b4d-820fff2cb58f_720x.jpg?v=1605081140"
+                                 alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info col-lg-6 col-md-6">
+                <div class="row titleRow">
+                    <div class="title">
+                        <span>Nike Court Air Max Volley</span>
+                    </div>
+                </div>
+                <div class="row priceRow">
+                    <ul>
+                        <li>
+                            <span class="price">$329.00</span>
+                        </li>
+                        <li><span class="in-outStock">In Stock</span></li>
+                    </ul>
+                </div>
+                <div class="row reviewRow">
+                    <a href="" class="reviews">
+                        <span class="reviewIcons">
+                            <span class="fa-regular fa-star"></span>
+                            <span class="fa-regular fa-star"></span>
+                            <span class="fa-regular fa-star"></span>
+                            <span class="fa-regular fa-star"></span>
+                            <span class="fa-regular fa-star"></span>
+                        </span>
+                        <span class="reviewText">No rewievs</span>
+                    </a>
+                </div>
+                <div class="row descRow">
+                    <p>
+                        Description Finally—a white sneaker for the rest of your life. Whether you’re walking,
+                        working, or simply kicking it, the versatile and understated Royale Blanco is going to
+                        get you where you
+                    </p>
+                </div>
+                <div class="row colorRow">
+                    <p class="colorVal">SIZE: <span>BLUE</span></p>
+                    <ul class="color">
+                        <li id="firstColorLi" class="colorLi isSelectedColor" data-value="Blue">
+                            <a style="background-color: rgb(74,165,199);" href=""></a>
+                        </li>
+                        <li class="colorLi" data-value="Orange">
+                            <a style="background-color: rgb(255,122,1)"
+                               href=""></a>
+                        </li>
+                        <li class="colorLi" data-value="Yellow">
+                            <a style="background-color: rgb(225,235,121);"
+                               href=""></a>
+                        </li>
+                        <li class="colorLi" data-value="Grey">
+                            <a style="background-color: rgb(130,130,130)"
+                               href=""></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row sizeRow">
+                    <p class="sizeVal">SIZE: <span>40</span></p>
+                    <ul class="size">
+                        <li id="firstSizeLi" class="sizeLi isSelectedSize" data-value="40"><span>40</span></li>
+                        <li class="sizeLi" data-value="41"><span>41</span></li>
+                        <li class="sizeLi" data-value="42"><span>42</span></li>
+                        <li class="sizeLi" data-value="43"><span>43</span></li>
+                        <li class="sizeLi" data-value="44"><span>44</span></li>
+                    </ul>
+                </div>
+                <div class="row addToCardRow">
+                    <div class="counter col-lg-2 col-md-3 col-sm-6 col-xs-2">
+                        <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                        <input id="productCounter" value="1" type="text">
+                        <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="whishList col-lg-2 col-md-3 col-sm-6 col-xs-2">
+                        <a href="">
+                            <i class="bi bi-heart whishListIcon"></i>
+                        </a>
+                    </div>
+                    <button class="addCard col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                        ADD TO CARD
+                    </button>
+                </div>
+                <div class="row buyItRow col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                    <button>
+                        BUY IT NOW
+                    </button>
+                </div>
+                <div class="row categoryRow">
+                    <span class="name">Brand:<span class="content">Nike</span></span>
+                    <span class="name">Category:<span class="content">Running</span></span>
+                    <span class="name">Gender:<span class="content">Men</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="description">
+    <div class="container">
+        <div class="row descRow">
+            <ul>
+                <li class="descriptionName">
+                    <span class="tabName tabActive" data-id="descriptionTab">Description</span>
+                </li>
+                <li class="comments">
+                    <span class="tabName" data-id="commentsTab">Comments</span>
+                </li>
+            </ul>
+        </div>
+        <div class="row descContentRow tab" id="descriptionTab">
+            <div class="descContent">
+                <span>DESCRIPTION</span>
+                <p>
+                    Finally—a white sneaker for the rest of your life. Whether you’re walking, working, or
+                    simply kicking it, the versatile and understated Royale Blanco is going to get you where
+                    you need to go. It might even help you feel better about where you are right now. Every
+                    great outfit is built from the ground up.
+
+                    The light, stable Nike Renew In-Season TR 10 Premium features a comfortable foam sole
+                    for great cushioning and energy return during circuit training and cardio-heavy
+                    routines. It locks your midfoot down to keep you feeling supported during your most
+                    intense workouts.
+
+                    Get Free Standard Delivery On All Orders!
+                </p>
+            </div>
+            <div class="row descImage">
+                <img class="col-lg-4 col-md-12"
+                     src="https://cdn.shopify.com/s/files/1/0332/6420/5963/products/p28-2_540x.jpg?v=1581901925"
+                     alt="">
+                <img class="col-lg-4  col-md-12"
+                     src="https://cdn.shopify.com/s/files/1/0332/6420/5963/products/p28-3_540x.jpg?v=1581901925"
+                     alt="">
+                <img class="col-lg-4  col-md-12"
+                     src="https://cdn.shopify.com/s/files/1/0332/6420/5963/products/p28-4_540x.jpg?v=1581901925"
+                     alt="">
+            </div>
+        </div>
+        <div class="row detailsTitleRow tab d-none" id="commentsTab">
+            <span class="customerReviewText">Customer Comments</span>
+            <div class="title">
+                <div class="star-review">
+                    <span class="noReview  d-none">
+                        No comments yet
+                    </span>
+                    <span class="starIcons">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="basedOn">
+                        Based on 1 comment
+                    </span>
+                </div>
+                <a href="#" id="writeComment">Write a comment</a>
+            </div>
+            <div class="row writeCommentRow">
+                <hr>
+                <p class="writeCmmnt">
+                    Write a comment
+                </p>
+                <form action="">
+                    <label class="nameLbl" for="name">Name</label><br>
+                    <input class="name-mail" type="text" id="name" placeholder="Enter your name"><br><br>
+                    <label class="mailLbl" for="mail">Email</label><br>
+                    <input class="name-mail" type="email" id="mail" placeholder="jamalaz@code.edu.az"><br><br>
+                    <label class="rating">
+                        Rating
+                    </label><br>
+                    <div class="starRating">
+                        <input name="star" class="" value="1" data-value="1" type="radio" id="rating1">
+                        <label for="rating1" class="fa-regular fa-star myStar"></label>
+                        <input name="star" value="2" data-value="2" type="radio" id="rating2">
+                        <label for="rating2" class="fa-regular fa-star myStar"></label>
+                        <input name="star" value="3" data-value="3" type="radio" id="rating3">
+                        <label for="rating3" class="fa-regular fa-star myStar"></label>
+                        <input name="star" value="4" data-value="4" type="radio" id="rating4">
+                        <label for="rating4" class="fa-regular fa-star myStar"></label>
+                        <input name="star" value="5" data-value="5" type="radio" id="rating5">
+                        <label for="rating5" class="fa-regular fa-star myStar"></label>
+                    </div>
+                    <label class="txtAreaLbl" for="comment">Body of comment</label><br>
+                    <textarea class="txtArea" name="" id="comment" cols="150" rows="8"
+                              placeholder="Write your comment here"></textarea>
+                    <button class="commentFormSubmit" type="submit">Submit Comment</button>
+                </form>
+            </div>
+            <div class="row commentsRow">
+                <div class="comment">
+                    <hr>
+                    <div class="commentIcons">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="name-date">
+                        <span>
+                            <span class="name">Camal</span> on <span class="date">Mar 17,2022</span>
+                        </span>
+                    </div>
+                    <div class="commentContent">
+                        <p>
+                            Salam Dostlar Necesiz
+                        </p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <hr>
+                    <div class="commentIcons">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="name-date">
+                        <span>
+                            <span class="name">Camal</span> on <span class="date">Mar 17,2022</span>
+                        </span>
+                    </div>
+                    <div class="commentContent">
+                        <p>
+                            Salam Dostlar Necesiz
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="relatedProducts">
+    <div class="container">
+        <div class="row">
+            <span class="relatedTitle">You may also like</span>
+        </div>
+        <div class="row">
+            <div class="related owl-carousel owl-theme">
+                <div class="smallImage">
+                    <div class="image">
+                        <a class="mainImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/2_e195f63f-79e4-436a-a065-ee9fb5895c9d_360x.jpg?v=1604995044"
+                                 alt="">
+                            <div class="icons">
+                                <a href="" class="whishlist"><i class="bi bi-heart"></i></a>
+                                <a href="" class="view"><i class="bi bi-eye"></i></a>
+                            </div>
+
+                        </a>
+                        <a class="secondImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/3_f793aa93-354e-4b50-8b86-d2ebe46e30a5_360x.jpg?v=1605080943"
+                                 alt="">
+                        </a>
+                        <div class="addToCard">
+                            <div class="increase-number-decrease">
+                                <a class="minus" href="">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <span id="inputNumber">1</span>
+                                <a class="plus" href="">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                            <a href="" class="toCard">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="name-price">
+                        <div class="name"><a href="">Nike Zoom Pegasus</a></div>
+                        <div class="price">£270.00</div>
+                    </div>
+                </div>
+                <div class="smallImage">
+                    <div class="image">
+                        <a class="mainImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/2_e195f63f-79e4-436a-a065-ee9fb5895c9d_360x.jpg?v=1604995044"
+                                 alt="">
+                            <div class="icons">
+                                <a href="" class="whishlist"><i class="bi bi-heart"></i></a>
+                                <a href="" class="view"><i class="bi bi-eye"></i></a>
+                            </div>
+
+                        </a>
+                        <a class="secondImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/3_f793aa93-354e-4b50-8b86-d2ebe46e30a5_360x.jpg?v=1605080943"
+                                 alt="">
+                        </a>
+                        <div class="addToCard">
+                            <div class="increase-number-decrease">
+                                <a class="minus" href="">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <span id="inputNumber">1</span>
+                                <a class="plus" href="">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                            <a href="" class="toCard">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="name-price">
+                        <div class="name"><a href="">Nike Zoom Pegasus</a></div>
+                        <div class="price">£270.00</div>
+                    </div>
+                </div>
+                <div class="smallImage">
+                    <div class="image">
+                        <a class="mainImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/2_e195f63f-79e4-436a-a065-ee9fb5895c9d_360x.jpg?v=1604995044"
+                                 alt="">
+                            <div class="icons">
+                                <a href="" class="whishlist"><i class="bi bi-heart"></i></a>
+                                <a href="" class="view"><i class="bi bi-eye"></i></a>
+                            </div>
+
+                        </a>
+                        <a class="secondImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/3_f793aa93-354e-4b50-8b86-d2ebe46e30a5_360x.jpg?v=1605080943"
+                                 alt="">
+                        </a>
+                        <div class="addToCard">
+                            <div class="increase-number-decrease">
+                                <a class="minus" href="">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <span id="inputNumber">1</span>
+                                <a class="plus" href="">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                            <a href="" class="toCard">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="name-price">
+                        <div class="name"><a href="">Nike Zoom Pegasus</a></div>
+                        <div class="price">£270.00</div>
+                    </div>
+                </div>
+                <div class="smallImage">
+                    <div class="image">
+                        <a class="mainImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/2_e195f63f-79e4-436a-a065-ee9fb5895c9d_360x.jpg?v=1604995044"
+                                 alt="">
+                            <div class="icons">
+                                <a href="" class="whishlist"><i class="bi bi-heart"></i></a>
+                                <a href="" class="view"><i class="bi bi-eye"></i></a>
+                            </div>
+
+                        </a>
+                        <a class="secondImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/3_f793aa93-354e-4b50-8b86-d2ebe46e30a5_360x.jpg?v=1605080943"
+                                 alt="">
+                        </a>
+                        <div class="addToCard">
+                            <div class="increase-number-decrease">
+                                <a class="minus" href="">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <span id="inputNumber">1</span>
+                                <a class="plus" href="">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                            <a href="" class="toCard">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="name-price">
+                        <div class="name"><a href="">Nike Zoom Pegasus</a></div>
+                        <div class="price">£270.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="recentlyViewed">
+    <div class="container">
+        <div class="row">
+            <span class="recentlyTitle">Recently Viewed</span>
+        </div>
+        <div class="row">
+            <div class="recently owl-carousel owl-theme">
+                <div class="smallImage">
+                    <div class="image">
+                        <a class="mainImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/2_e195f63f-79e4-436a-a065-ee9fb5895c9d_360x.jpg?v=1604995044"
+                                 alt="">
+                            <div class="icons">
+                                <a href="" class="whishlist"><i class="bi bi-heart"></i></a>
+                                <a href="" class="view"><i class="bi bi-eye"></i></a>
+                            </div>
+
+                        </a>
+                        <a class="secondImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/3_f793aa93-354e-4b50-8b86-d2ebe46e30a5_360x.jpg?v=1605080943"
+                                 alt="">
+                        </a>
+                        <div class="addToCard">
+                            <div class="increase-number-decrease">
+                                <a class="minus" href="">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <span id="inputNumber">1</span>
+                                <a class="plus" href="">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                            <a href="" class="toCard">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="name-price">
+                        <div class="name"><a href="">Nike Zoom Pegasus</a></div>
+                        <div class="price">£270.00</div>
+                    </div>
+                </div>
+                <div class="smallImage">
+                    <div class="image">
+                        <a class="mainImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/2_e195f63f-79e4-436a-a065-ee9fb5895c9d_360x.jpg?v=1604995044"
+                                 alt="">
+                            <div class="icons">
+                                <a href="" class="whishlist"><i class="bi bi-heart"></i></a>
+                                <a href="" class="view"><i class="bi bi-eye"></i></a>
+                            </div>
+
+                        </a>
+                        <a class="secondImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/3_f793aa93-354e-4b50-8b86-d2ebe46e30a5_360x.jpg?v=1605080943"
+                                 alt="">
+                        </a>
+                        <div class="addToCard">
+                            <div class="increase-number-decrease">
+                                <a class="minus" href="">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <span id="inputNumber">1</span>
+                                <a class="plus" href="">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                            <a href="" class="toCard">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="name-price">
+                        <div class="name"><a href="">Nike Zoom Pegasus</a></div>
+                        <div class="price">£270.00</div>
+                    </div>
+                </div>
+                <div class="smallImage">
+                    <div class="image">
+                        <a class="mainImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/2_e195f63f-79e4-436a-a065-ee9fb5895c9d_360x.jpg?v=1604995044"
+                                 alt="">
+                            <div class="icons">
+                                <a href="" class="whishlist"><i class="bi bi-heart"></i></a>
+                                <a href="" class="view"><i class="bi bi-eye"></i></a>
+                            </div>
+
+                        </a>
+                        <a class="secondImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/3_f793aa93-354e-4b50-8b86-d2ebe46e30a5_360x.jpg?v=1605080943"
+                                 alt="">
+                        </a>
+                        <div class="addToCard">
+                            <div class="increase-number-decrease">
+                                <a class="minus" href="">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <span id="inputNumber">1</span>
+                                <a class="plus" href="">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                            <a href="" class="toCard">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="name-price">
+                        <div class="name"><a href="">Nike Zoom Pegasus</a></div>
+                        <div class="price">£270.00</div>
+                    </div>
+                </div>
+                <div class="smallImage">
+                    <div class="image">
+                        <a class="mainImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/2_e195f63f-79e4-436a-a065-ee9fb5895c9d_360x.jpg?v=1604995044"
+                                 alt="">
+                            <div class="icons">
+                                <a href="" class="whishlist"><i class="bi bi-heart"></i></a>
+                                <a href="" class="view"><i class="bi bi-eye"></i></a>
+                            </div>
+
+                        </a>
+                        <a class="secondImage" href="">
+                            <img src="https://cdn.shopify.com/s/files/1/1385/4931/products/3_f793aa93-354e-4b50-8b86-d2ebe46e30a5_360x.jpg?v=1605080943"
+                                 alt="">
+                        </a>
+                        <div class="addToCard">
+                            <div class="increase-number-decrease">
+                                <a class="minus" href="">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <span id="inputNumber">1</span>
+                                <a class="plus" href="">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                            <a href="" class="toCard">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="name-price">
+                        <div class="name"><a href="">Nike Zoom Pegasus</a></div>
+                        <div class="price">£270.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="~/assets/homeowlcarousel/owl.carousel.min.js"></script>
+    <script src="~/assets/Js/details.js"></script>
+}
