@@ -9,7 +9,7 @@ namespace FinalProjectBack_Front.Models
     public class Size
     {
         public int Id { get; set; }
-        [Required]
-        public int Name { get; set; }
+        [Required(ErrorMessage ="Size is required")]
+        public string Value { get; set; }
     }
 }

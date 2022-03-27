@@ -19,8 +19,15 @@ using FinalProjectBack_Front;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\Views\_ViewImports.cshtml"
+using FinalProjectBack_Front.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ff1baa63d1985afb65b4b94df3efd88e43d361ed", @"/Views/Products/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d5fcebeac63c5a16edee6fb2ca72d588080740e0", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"24abfa04f759591540bcca5cf215f1a3b93a1b17", @"/Views/_ViewImports.cshtml")]
     public class Views_Products_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString(""), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -73,7 +80,7 @@ using FinalProjectBack_Front;
                     </span>
                 </div>
                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff1baa63d1985afb65b4b94df3efd88e43d361ed5269", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff1baa63d1985afb65b4b94df3efd88e43d361ed5496", async() => {
                 WriteLiteral("\r\n                    <input class=\"search\" type=\"search\" placeholder=\"Search for prpduct title\"><br><br>\r\n                    <button class=\"searchSubmitBtn\" type=\"submit\">FILTER</button>\r\n                ");
             }
             );
@@ -101,7 +108,7 @@ using FinalProjectBack_Front;
                     <div class=""rangeDiv"">
                         <div class=""slider-track""></div>
                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff1baa63d1985afb65b4b94df3efd88e43d361ed7210", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff1baa63d1985afb65b4b94df3efd88e43d361ed7437", async() => {
                 WriteLiteral(@"
                             <button class=""priceSubmitBtn"" type=""submit"">FILTER</button>
                             <input type=""range"" min=""0"" max=""999"" value=""0"" id=""slider-1"" oninput=""slideOne()"">
@@ -639,7 +646,7 @@ using FinalProjectBack_Front;
             WriteLiteral(">Nike Zoom Pegasus</a></div>\r\n                    <div class=\"price\">£270.00</div>\r\n                </div>\r\n            </div>\r\n\r\n        </div>\r\n    </div>\r\n</section>\r\n\r\n");
             DefineSection("Scripts", async() => {
                 WriteLiteral("\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff1baa63d1985afb65b4b94df3efd88e43d361ed52379", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ff1baa63d1985afb65b4b94df3efd88e43d361ed52606", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

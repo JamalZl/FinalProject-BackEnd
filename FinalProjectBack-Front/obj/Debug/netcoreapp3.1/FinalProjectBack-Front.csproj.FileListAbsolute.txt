@@ -154,3 +154,16 @@ C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Fro
 C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\_ViewImports.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\_ViewStart.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Size\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Size\Create.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Size\Edit.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Color\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Color\Create.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Color\Edit.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Category\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Category\Create.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Category\Edit.cshtml.g.cs
