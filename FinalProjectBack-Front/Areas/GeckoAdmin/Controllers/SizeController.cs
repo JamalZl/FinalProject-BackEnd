@@ -39,7 +39,7 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
             Size sizeControl = _context.Sizes.FirstOrDefault(s => s.Value.Trim().ToLower() == size.Value.Trim().ToLower());
             if (sizeControl != null)
             {
-                ModelState.AddModelError("Value", "Please enter another size.Size you just entered is exiested in database");
+                ModelState.AddModelError("Value", "Please enter another size.Size you just entered is existed in database");
                 return View();
             }
 
@@ -65,7 +65,7 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
             if (existedSize == null) return NotFound();
             if (sizeControl != null && sizeControl.Id != id)
             {
-                ModelState.AddModelError("Value", "Please enter another size.Size you just entered is exiested in database");
+                ModelState.AddModelError("Value", "Please enter another size.Size you just entered is existed in database");
                 return View(existedSize);
             }
             existedSize.Value = size.Value;

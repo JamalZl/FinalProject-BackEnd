@@ -167,3 +167,9 @@ C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Fro
 C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Category\Index.cshtml.g.cs
 C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Category\Create.cshtml.g.cs
 C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Category\Edit.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Tag\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Tag\Create.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Tag\Edit.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Brand\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Brand\Create.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Brand\Edit.cshtml.g.cs

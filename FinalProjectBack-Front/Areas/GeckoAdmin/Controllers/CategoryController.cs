@@ -38,7 +38,7 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
             Category categoryControl = _context.Categories.FirstOrDefault(s => s.Name.Trim().ToLower() == category.Name.Trim().ToLower());
             if (categoryControl != null)
             {
-                ModelState.AddModelError("Name", "Please enter another category.Category you just entered is exiested in database");
+                ModelState.AddModelError("Name", "Please enter another category.Category you just entered is existed in database");
                 return View();
             }
 
@@ -64,7 +64,7 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
             if (existedCategory == null) return NotFound();
             if (categoryControl != null && categoryControl.Id != id)
             {
-                ModelState.AddModelError("Value", "Please enter another category.Category you just entered is exiested in database");
+                ModelState.AddModelError("Value", "Please enter another category.Category you just entered is existed in database");
                 return View(existedCategory);
             }
             existedCategory.Name = category.Name;
