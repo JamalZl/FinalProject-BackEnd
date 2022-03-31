@@ -91,12 +91,6 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 ModelState.AddModelError("Name", "Please enter different brand.Brand you just entered is existed in database");
                 return View(existedBrand);
             }
-
-            //if (brand.ImageFile == null)
-            //{
-            //    ModelState.AddModelError("ImageFile", "Please insert an image");
-            //    return View(existedBrand);
-            //}
             if(brand.ImageFile!=null)
             {
                 if (!brand.ImageFile.IsImage())

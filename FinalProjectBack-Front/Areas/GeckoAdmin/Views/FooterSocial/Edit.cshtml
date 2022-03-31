@@ -1,0 +1,43 @@
+﻿@model FooterSocial
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="fs-17 font-weight-600 mb-0">Edit social medias</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+                    <form method="post">
+                        <div class="form-group">
+                            <label asp-for="@Model.SocialUrl" class="font-weight-600">Enter url</label>
+                            <input asp-for="@Model.SocialUrl" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.SocialUrl"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.SocialIcon" class="font-weight-600">Enter social icon</label>
+                            <input asp-for="@Model.SocialIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.SocialIcon"></span>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-controller="footersocial" asp-action="index" class="btn btn-dark mx-3">Go back</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section AdminScripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+

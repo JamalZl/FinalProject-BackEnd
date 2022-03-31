@@ -19,5 +19,9 @@ namespace FinalProjectBack_Front.DAL
         public DbSet<Color> Colors { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<FooterSocial> FooterSocials { get; set; }
     }
 }

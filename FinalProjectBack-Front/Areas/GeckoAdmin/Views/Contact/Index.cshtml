@@ -1,0 +1,91 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "Index";
+}
+
+@section AdminCSS{
+    <link href="~/admin/assets/extrapages/material-dashboard.css" rel="stylesheet">
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div style="background-color: rgb(55,160,0)" class="shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3">Contact</h6>
+                    </div>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-2">#</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-2">Image</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-2">Email</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-2">Address</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-2">Working hours</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 px-2">Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (Contact contact in Model)
+                                {
+                                    <tr>
+                                        <td class="px-1">
+                                            <div class="d-flex">
+                                                <h6 class="mb-0 text-sm mx-1">@contact.Id</h6>
+                                            </div>
+                                        </td>
+                                        <td class="px-1">
+                                            <div class="d-flex">
+                                                @if (contact.Image.Contains("https://"))
+                                                {
+                                                    <img style="width:140px;height:75px;" src="@contact.Image" alt="brand image" />
+                                                }
+                                                else
+                                                {
+                                                    <img style="width:140px;height:75px;" src="~/assets/images/@contact.Image" alt="brand image" />
+                                                }
+                                            </div>
+                                        </td>
+                                        <td class="px-1">
+                                            <div class="d-flex">
+                                                <h6 class="mb-0 text-sm mx-1">@contact.Email</h6>
+                                            </div>
+                                        </td>
+                                        <td class="px-1">
+                                            <div class="d-flex">
+                                                <h6 class="mb-0 text-sm mx-1">@contact.Address</h6>
+                                            </div>
+                                        </td>
+                                        <td class="px-1">
+                                            <div class="d-flex">
+                                                <h6 class="mb-0 text-sm mx-1">@contact.WorkingHours</h6>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a style="text-decoration:none" asp-controller="contact" asp-action="edit" asp-route-id="@contact.Id">
+                                                <i style="color: orange; font-size: 25px;" class="bi bi-pencil-square"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            @if (Model.Count == 0)
+            {
+                <a asp-controller="contact" asp-action="create" style="font-size:14px; width:100%;" class="btn btn-outline-success">Create</a>
+            }
+            else
+            {
+
+            }
+        </div>
+    </div>
+</div>
+

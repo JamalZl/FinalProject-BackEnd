@@ -173,3 +173,15 @@ C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Fro
 C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Brand\Index.cshtml.g.cs
 C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Brand\Create.cshtml.g.cs
 C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Brand\Edit.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Slider\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Slider\Create.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Slider\Edit.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Contact\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Contact\Create.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Contact\Edit.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\FooterSocial\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\FooterSocial\Create.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\FooterSocial\Edit.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Setting\Index.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Setting\Create.cshtml.g.cs
+C:\Users\User\Documents\FinalProject\FinalProjectBack-Front\FinalProjectBack-Front\obj\Debug\netcoreapp3.1\Razor\Areas\GeckoAdmin\Views\Setting\Edit.cshtml.g.cs

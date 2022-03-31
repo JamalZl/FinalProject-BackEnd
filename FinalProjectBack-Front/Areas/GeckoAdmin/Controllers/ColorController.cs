@@ -37,7 +37,7 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
             Color colorControl = _context.Colors.FirstOrDefault(c => c.Name.Trim().ToLower() == color.Name.Trim().ToLower() && c.Value.Trim().ToLower()==color.Value.Trim().ToLower() || c.Name.Trim().ToLower() != color.Name.Trim().ToLower() && c.Value.Trim().ToLower() == color.Value.Trim().ToLower() || c.Name.Trim().ToLower() == color.Name.Trim().ToLower() && c.Value.Trim().ToLower() != color.Value.Trim().ToLower());
             if (colorControl != null)
             {
-                ModelState.AddModelError("", "Please enter different color name and value.These are existed in database");
+                ModelState.AddModelError("", "Please enter different color name or value.These are existed in database");
                 return View();
             }
             _context.Colors.Add(color);

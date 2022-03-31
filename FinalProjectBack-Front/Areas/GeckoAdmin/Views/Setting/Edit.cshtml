@@ -1,0 +1,249 @@
+﻿@model Setting
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="fs-17 font-weight-600 mb-0">Create setting</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="px-1 mb-4">
+                            <p>
+                                Current logo image
+                            </p>
+                            <div class="d-flex">
+                                @if (Model.Logo.Contains("https://"))
+                                {
+                                    <img style="width:140px;height:75px;" src="@Model.Logo" alt="logo image" />
+                                }
+                                else
+                                {
+                                    <img style="width:140px;height:75px;" src="~/assets/images/@Model.Logo" alt="logo image" />
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.LogoImageFile" class="font-weight-600">Enter logo</label>
+                            <input asp-for="@Model.LogoImageFile" accept="image/*" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.LogoImageFile"></span>
+                        </div>
+                        <div class="px-1 mb-4">
+                            <p>
+                                Current handpicked image
+                            </p>
+                            <div class="d-flex">
+                                @if (Model.HandpickedImage.Contains("https://"))
+                                {
+                                    <img style="width:140px;height:75px;" src="@Model.HandpickedImage" alt="handpicked image" />
+                                }
+                                else
+                                {
+                                    <img style="width:140px;height:75px;" src="~/assets/images/@Model.HandpickedImage" alt="handpicked image" />
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.HandpickedImageFile" class="font-weight-600">Enter handpicked image</label>
+                            <input asp-for="@Model.HandpickedImageFile" accept="image/*" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.HandpickedImageFile"></span>
+                        </div>
+                        <div class="px-1 mb-4">
+                            <p>
+                                Current new arrival image
+                            </p>
+                            <div class="d-flex">
+                                @if (Model.NewArrivalImage.Contains("https://"))
+                                {
+                                    <img style="width:140px;height:75px;" src="@Model.NewArrivalImage" alt="new arrival image" />
+                                }
+                                else
+                                {
+                                    <img style="width:140px;height:75px;" src="~/assets/images/@Model.NewArrivalImage" alt="new arrival image" />
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.NewArrivalImageFile" class="font-weight-600">Enter new arrival image</label>
+                            <input asp-for="@Model.NewArrivalImageFile" accept="image/*" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.NewArrivalImageFile"></span>
+                        </div>
+                        <div class="px-1 mb-4">
+                            <p>
+                                Current fun image
+                            </p>
+                            <div class="d-flex">
+                                @if (Model.FunImage.Contains("https://"))
+                                {
+                                    <img style="width:140px;height:75px;" src="@Model.FunImage" alt="fun image" />
+                                }
+                                else
+                                {
+                                    <img style="width:140px;height:75px;" src="~/assets/images/@Model.FunImage" alt="fun image" />
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.FunImageFile" class="font-weight-600">Enter fun image</label>
+                            <input asp-for="@Model.FunImageFile" accept="image/*" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.FunImageFile"></span>
+                        </div>
+                        <div class="px-1 mb-4">
+                            <p>
+                                Current subscribe image
+                            </p>
+                            <div class="d-flex">
+                                @if (Model.SubscribeImage.Contains("https://"))
+                                {
+                                    <img style="width:140px;height:75px;" src="@Model.SubscribeImage" alt="subscribe image" />
+                                }
+                                else
+                                {
+                                    <img style="width:140px;height:75px;" src="~/assets/images/@Model.SubscribeImage" alt="subscribe image" />
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.SubscribeImageFile" class="font-weight-600">Enter subscribe image</label>
+                            <input asp-for="@Model.SubscribeImageFile" accept="image/*" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.SubscribeImageFile"></span>
+                        </div>
+                        <div class="px-1 mb-4">
+                            <p>
+                                Current uplifted image
+                            </p>
+                            <div class="d-flex">
+                                @if (Model.UpliftedImage.Contains("https://"))
+                                {
+                                    <img style="width:140px;height:75px;" src="@Model.UpliftedImage" alt="uplifted image" />
+                                }
+                                else
+                                {
+                                    <img style="width:140px;height:75px;" src="~/assets/images/@Model.UpliftedImage" alt="uplifted image" />
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.UpliftedImageFile" class="font-weight-600">Enter uplifted image</label>
+                            <input asp-for="@Model.UpliftedImageFile" accept="image/*" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.UpliftedImageFile"></span>
+                        </div>
+                        <div class="px-1 mb-4">
+                            <p>
+                                Current footer payment image
+                            </p>
+                            <div class="d-flex">
+                                @if (Model.FooterPaymentImage.Contains("https://"))
+                                {
+                                    <img style="width:140px;height:75px;" src="@Model.FooterPaymentImage" alt="uplifted image" />
+                                }
+                                else
+                                {
+                                    <img style="width:140px;height:75px;" src="~/assets/images/@Model.FooterPaymentImage" alt="uplifted image" />
+                                }
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.FooterPaymentImageFile" class="font-weight-600">Enter payment image</label>
+                            <input asp-for="@Model.FooterPaymentImageFile" accept="image/*" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.FooterPaymentImageFile"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.MenuIcon" class="font-weight-600">Enter menu icon</label>
+                            <input asp-for="@Model.MenuIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.MenuIcon"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.CloseIcon" class="font-weight-600">Enter close icon</label>
+                            <input asp-for="@Model.CloseIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.CloseIcon"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.SearchIcon" class="font-weight-600">Enter seacrh icon</label>
+                            <input asp-for="@Model.SearchIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.SearchIcon"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.UserIcon" class="font-weight-600">Enter user icon</label>
+                            <input asp-for="@Model.UserIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.UserIcon"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.WhishlistIcon" class="font-weight-600">Enter whishlist icon</label>
+                            <input asp-for="@Model.WhishlistIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.WhishlistIcon"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.BasketIcon" class="font-weight-600">Enter basket icon</label>
+                            <input asp-for="@Model.BasketIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.BasketIcon"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.HandpickedSale" class="font-weight-600">Enter handpicked sale</label>
+                            <input asp-for="@Model.HandpickedSale" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.HandpickedSale"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.HandpickedSaleTitle" class="font-weight-600">Enter handpicked sale title</label>
+                            <input asp-for="@Model.HandpickedSaleTitle" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.HandpickedSaleTitle"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.SubscribeTitle" class="font-weight-600">Enter subscribe title</label>
+                            <input asp-for="@Model.SubscribeTitle" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.SubscribeTitle"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.FooterAddress" class="font-weight-600">Enter footer address</label>
+                            <input asp-for="@Model.FooterAddress" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.FooterAddress"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.FooterAdressIcon" class="font-weight-600">Enter footer address icon</label>
+                            <input asp-for="@Model.FooterAdressIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.FooterAdressIcon"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.FooterEmail" class="font-weight-600">Enter footer email</label>
+                            <input asp-for="@Model.FooterEmail" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.FooterEmail"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.FooterEmailIcon" class="font-weight-600">Enter footer email icon</label>
+                            <input asp-for="@Model.FooterEmailIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.FooterEmailIcon"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.FooterNumber" class="font-weight-600">Enter footer number</label>
+                            <input asp-for="@Model.FooterNumber" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.FooterNumber"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.FooterNumberIcon" class="font-weight-600">Enter footer number icon</label>
+                            <input asp-for="@Model.FooterNumberIcon" class="form-control">
+                            <span style="margin-top:10px;display:inline-block" class="text text-danger" asp-validation-for="@Model.FooterNumberIcon"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Submit</button>
+                        <a asp-controller="brand" asp-action="index" class="btn btn-dark mx-3">Go back</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section AdminScripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}
+
