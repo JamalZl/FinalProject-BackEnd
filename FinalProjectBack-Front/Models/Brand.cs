@@ -17,5 +17,6 @@ namespace FinalProjectBack_Front.Models
         public string Image { get; set; }
         [NotMapped]
         public IFormFile ImageFile { get; set; }
+        public List<Product> Products { get; set; }
     }
 }

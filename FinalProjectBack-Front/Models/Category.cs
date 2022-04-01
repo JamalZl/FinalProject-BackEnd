@@ -12,5 +12,7 @@ namespace FinalProjectBack_Front.Models
         [Required(ErrorMessage ="Please enter a category name")]
         [StringLength(maximumLength:25)]
         public string Name { get; set; }
+
+        public List<ProductCategory> ProductCategories { get; set; }
     }
 }

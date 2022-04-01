@@ -11,5 +11,6 @@ namespace FinalProjectBack_Front.Models
         public int Id { get; set; }
         [Required(ErrorMessage ="Size is required")]
         public string Value { get; set; }
+        public List<ProductSize> ProductSizes { get; set; }
     }
 }

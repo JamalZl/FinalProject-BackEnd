@@ -23,5 +23,11 @@ namespace FinalProjectBack_Front.DAL
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<FooterSocial> FooterSocials { get; set; }
+        public DbSet<Campaign> Campaigns { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<ProductColor> ProductColors { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<ProductSize> ProductSizes { get; set; }
     }
 }

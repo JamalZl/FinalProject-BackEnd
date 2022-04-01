@@ -118,6 +118,7 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 setting.FunImage = setting.FunImageFile.SaveImg(_env.WebRootPath, "assets/images");
             }
 
+
             if (setting.SubscribeImageFile == null)
             {
                 ModelState.AddModelError("SubscribeImageFile", "Please don't leave empty image area");
@@ -138,6 +139,7 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 setting.SubscribeImage = setting.SubscribeImageFile.SaveImg(_env.WebRootPath, "assets/images");
             }
 
+
             if (setting.UpliftedImageFile == null)
             {
                 ModelState.AddModelError("UpliftedImageFile", "Please don't leave empty image area");
@@ -157,6 +159,7 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 }
                 setting.UpliftedImage = setting.UpliftedImageFile.SaveImg(_env.WebRootPath, "assets/images");
             }
+
 
             if (setting.FooterPaymentImageFile == null)
             {
@@ -202,12 +205,12 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 if (!setting.LogoImageFile.IsImage())
                 {
                     ModelState.AddModelError("LogoImageFile", "Please insert a valid image type such as jpg,png,jpeg etc");
-                    return View();
+                    return View(existedSetting);
                 }
                 if (!setting.LogoImageFile.IsSizeOkay(2))
                 {
                     ModelState.AddModelError("LogoImageFile", "Image size can not be more than 2MB");
-                    return View();
+                    return View(existedSetting);
                 }
                 Helpers.Helper.DeleteImg(_env.WebRootPath, "assets/images", existedSetting.Logo);
                 existedSetting.Logo = setting.LogoImageFile.SaveImg(_env.WebRootPath, "assets/images");
@@ -218,12 +221,12 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 if (!setting.HandpickedImageFile.IsImage())
                 {
                     ModelState.AddModelError("HandpickedImageFile", "Please insert a valid image type such as jpg,png,jpeg etc");
-                    return View();
+                    return View(existedSetting);
                 }
                 if (!setting.HandpickedImageFile.IsSizeOkay(2))
                 {
                     ModelState.AddModelError("HandpickedImageFile", "Image size can not be more than 2MB");
-                    return View();
+                    return View(existedSetting);
                 }
                 Helpers.Helper.DeleteImg(_env.WebRootPath, "assets/images", existedSetting.Logo);
                 existedSetting.HandpickedImage = setting.HandpickedImageFile.SaveImg(_env.WebRootPath, "assets/images");
@@ -234,12 +237,12 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 if (!setting.NewArrivalImageFile.IsImage())
                 {
                     ModelState.AddModelError("NewArrivalImageFile", "Please insert a valid image type such as jpg,png,jpeg etc");
-                    return View();
+                    return View(existedSetting);
                 }
                 if (!setting.NewArrivalImageFile.IsSizeOkay(2))
                 {
                     ModelState.AddModelError("NewArrivalImageFile", "Image size can not be more than 2MB");
-                    return View();
+                    return View(existedSetting);
                 }
                 Helpers.Helper.DeleteImg(_env.WebRootPath, "assets/images", existedSetting.Logo);
                 existedSetting.NewArrivalImage = setting.NewArrivalImageFile.SaveImg(_env.WebRootPath, "assets/images");
@@ -250,12 +253,12 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 if (!setting.FunImageFile.IsImage())
                 {
                     ModelState.AddModelError("FunImageFile", "Please insert a valid image type such as jpg,png,jpeg etc");
-                    return View();
+                    return View(existedSetting);
                 }
                 if (!setting.FunImageFile.IsSizeOkay(2))
                 {
                     ModelState.AddModelError("FunImageFile", "Image size can not be more than 2MB");
-                    return View();
+                    return View(existedSetting);
                 }
                 Helpers.Helper.DeleteImg(_env.WebRootPath, "assets/images", existedSetting.Logo);
                 existedSetting.FunImage = setting.FunImageFile.SaveImg(_env.WebRootPath, "assets/images");
@@ -266,12 +269,12 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 if (!setting.SubscribeImageFile.IsImage())
                 {
                     ModelState.AddModelError("SubscribeImageFile", "Please insert a valid image type such as jpg,png,jpeg etc");
-                    return View();
+                    return View(existedSetting);
                 }
                 if (!setting.SubscribeImageFile.IsSizeOkay(2))
                 {
                     ModelState.AddModelError("SubscribeImageFile", "Image size can not be more than 2MB");
-                    return View();
+                    return View(existedSetting);
                 }
                 Helpers.Helper.DeleteImg(_env.WebRootPath, "assets/images", existedSetting.Logo);
                 existedSetting.SubscribeImage = setting.SubscribeImageFile.SaveImg(_env.WebRootPath, "assets/images");
@@ -282,12 +285,12 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 if (!setting.UpliftedImageFile.IsImage())
                 {
                     ModelState.AddModelError("UpliftedImageFile", "Please insert a valid image type such as jpg,png,jpeg etc");
-                    return View();
+                    return View(existedSetting);
                 }
                 if (!setting.UpliftedImageFile.IsSizeOkay(2))
                 {
                     ModelState.AddModelError("UpliftedImageFile", "Image size can not be more than 2MB");
-                    return View();
+                    return View(existedSetting);
                 }
                 Helpers.Helper.DeleteImg(_env.WebRootPath, "assets/images", existedSetting.Logo);
                 existedSetting.UpliftedImage = setting.UpliftedImageFile.SaveImg(_env.WebRootPath, "assets/images");
@@ -298,12 +301,12 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 if (!setting.FooterPaymentImageFile.IsImage())
                 {
                     ModelState.AddModelError("FooterPaymentImageFile", "Please insert a valid image type such as jpg,png,jpeg etc");
-                    return View();
+                    return View(existedSetting);
                 }
                 if (!setting.FooterPaymentImageFile.IsSizeOkay(2))
                 {
                     ModelState.AddModelError("FooterPaymentImageFile", "Image size can not be more than 2MB");
-                    return View();
+                    return View(existedSetting);
                 }
                 Helpers.Helper.DeleteImg(_env.WebRootPath, "assets/images", existedSetting.Logo);
                 existedSetting.FooterPaymentImage = setting.FooterPaymentImageFile.SaveImg(_env.WebRootPath, "assets/images");

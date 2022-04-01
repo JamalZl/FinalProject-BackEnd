@@ -15,5 +15,6 @@ namespace FinalProjectBack_Front.Models
         [Required(ErrorMessage ="Please enter a color value")]
         [StringLength(maximumLength:25)]
         public string Value { get; set; }
+        public List<ProductColor> ProductColors { get; set; }
     }
 }

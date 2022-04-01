@@ -12,5 +12,6 @@ namespace FinalProjectBack_Front.Models
         [Required(ErrorMessage ="Please enter a tag name")]
         [StringLength(maximumLength:15)]
         public string Name { get; set; }
+        public List<Product> Products { get; set; }
     }
 }

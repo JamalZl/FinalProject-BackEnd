@@ -6,15 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20220329120036_contacttableadded.cs" />
-    <Compile Remove="Migrations\20220329120036_contacttableadded.Designer.cs" />
-    <Compile Remove="Migrations\20220329120212_contacttableadded.cs" />
-    <Compile Remove="Migrations\20220329120212_contacttableadded.Designer.cs" />
-    <Compile Remove="Migrations\20220329120413_ContactTableAdded.cs" />
-    <Compile Remove="Migrations\20220329120413_ContactTableAdded.Designer.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.23" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.23" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.23" />
