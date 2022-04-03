@@ -59,6 +59,11 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
             product.ProductSizes = new List<ProductSize>();
             product.ProductImages = new List<ProductImage>();
 
+            if (product.CategoryIds == null)
+            {
+                ModelState.AddModelError("CategoryIds", "Please choose at least one category");
+                return View();
+            }
             foreach (var id in product.CategoryIds)
             {
                 ProductCategory pCategory = new ProductCategory
@@ -68,6 +73,11 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                 };
                 product.ProductCategories.Add(pCategory);
             }
+            if (product.ColorIds == null)
+            {
+                ModelState.AddModelError("ColorIds", "Please choose at least one color");
+                return View();
+            }
             foreach (var id in product.ColorIds)
             {
                 ProductColor pColor = new ProductColor
@@ -75,6 +85,12 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                     Product = product,
                     ColorId = id
                 };
+                product.ProductColors.Add(pColor);
+            }
+            if (product.SizeIds == null)
+            {
+                ModelState.AddModelError("SizeIds", "Please choose at least one size");
+                return View();
             }
             foreach (var id in product.SizeIds)
             {
@@ -83,10 +99,16 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
                     Product = product,
                     SizeId = id
                 };
+                product.ProductSizes.Add(pSize);
             }
-            if (product.ImageFiles.Count <= 4)
+            if (product.ImageFiles == null)
             {
-                ModelState.AddModelError("ImageFiles", "You can not choose lower than 4 images");
+                ModelState.AddModelError("ImageFiles", "Please dont leave empty images area");
+                return View();
+            }
+            if (product.ImageFiles.Count < 3)
+            {
+                ModelState.AddModelError("ImageFiles", "You have to choose at least 4 image");
                 return View();
             }
             foreach (var img in product.ImageFiles)
@@ -114,6 +136,166 @@ namespace FinalProjectBack_Front.Areas.GeckoAdmin.Controllers
             _context.Products.Add(product);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Edit(int id)
+        {
+            ViewBag.Campaigns = _context.Campaigns.ToList();
+            ViewBag.Categories = _context.Categories.ToList();
+            ViewBag.Colors = _context.Colors.ToList();
+            ViewBag.Sizes = _context.Sizes.ToList();
+            ViewBag.Brands = _context.Brands.ToList();
+            ViewBag.Tags = _context.Tags.ToList();
+            Product product = _context.Products.Include(p=>p.ProductImages).Include(p => p.ProductCategories).ThenInclude(pc => pc.Category).Include(p => p.ProductColors).ThenInclude(pc => pc.Color).Include(p => p.ProductSizes).ThenInclude(ps => ps.Size).FirstOrDefault(p => p.Id == id);
+            if (product == null) return NotFound();
+            return View(product);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Product product)
+        {
+            ViewBag.Campaigns = _context.Campaigns.ToList();
+            ViewBag.Categories = _context.Categories.ToList();
+            ViewBag.Colors = _context.Colors.ToList();
+            ViewBag.Sizes = _context.Sizes.ToList();
+            ViewBag.Brands = _context.Brands.ToList();
+            ViewBag.Tags = _context.Tags.ToList();
+            Product existedProduct = _context.Products.Include(p=>p.ProductImages).Include(p => p.ProductCategories).ThenInclude(pc => pc.Category).Include(p => p.ProductColors).ThenInclude(pc => pc.Color).Include(p => p.ProductSizes).ThenInclude(ps => ps.Size).FirstOrDefault(p => p.Id == product.Id);
+            if (!ModelState.IsValid) return View();
+            if (existedProduct == null) return NotFound();
+            if (product.ImageFiles != null)
+            {
+                if (product.ImageFiles.Count < 3)
+                {
+                    ModelState.AddModelError("ImageFiles", "You have to choose at least 4 image");
+                    return View(existedProduct);
+                }
+                foreach (var img in product.ImageFiles)
+                {
+                    if (!img.IsImage())
+                    {
+                        ModelState.AddModelError("ImageFiles", "Please insert a valid image type such as jpg,png,jpeg etc");
+                        return View(existedProduct);
+                    }
+                    if (!img.IsSizeOkay(2))
+                    {
+                        ModelState.AddModelError("ImageFiles", "Image size can not be more than 2MB");
+                        return View(existedProduct);
+                    }
+                }
+                List<ProductImage> removableImages = existedProduct.ProductImages.Where(pi => product.ImageIds.Contains(pi.Id)).ToList();
+
+                existedProduct.ProductImages.RemoveAll(pi => removableImages.Any(ri => ri.Id == pi.Id));
+
+                foreach (var rImage in removableImages)
+                {
+                    Helpers.Helper.DeleteImg(_env.WebRootPath, "assets/images", rImage.Image);
+                }
+
+                foreach (var img in product.ImageFiles)
+                {
+                    ProductImage pImage = new ProductImage
+                    {
+                        Image = img.SaveImg(_env.WebRootPath, "assets/images"),
+                        ProductId = existedProduct.Id
+                    };
+                    existedProduct.ProductImages.Add(pImage);
+                }
+
+            }
+            if (product.CategoryIds == null)
+            {
+                ModelState.AddModelError("CategoryIds", "Please choose at least one category");
+                return View(existedProduct);
+            }
+            List<ProductCategory> removableCategories = existedProduct.ProductCategories.Where(pc => !product.CategoryIds.Contains(pc.Id)).ToList();
+
+            existedProduct.ProductCategories.RemoveAll(pc => removableCategories.Any(rc => pc.Id == rc.Id));
+            foreach (var categoryId in product.CategoryIds)
+            {
+                ProductCategory productCategory = existedProduct.ProductCategories.FirstOrDefault(fc => fc.CategoryId == categoryId);
+                if (productCategory == null)
+                {
+                    ProductCategory pCategory = new ProductCategory
+                    {
+                        CategoryId = categoryId,
+                        ProductId = existedProduct.Id
+                    };
+                    existedProduct.ProductCategories.Add(pCategory);
+                }
+            }
+
+            if (product.ColorIds == null)
+            {
+                ModelState.AddModelError("ColorIds", "Please choose at least one color");
+                return View(existedProduct);
+            }
+
+            List<ProductColor> removableColors = existedProduct.ProductColors.Where(pc => !product.ColorIds.Contains(pc.Id)).ToList();
+
+            existedProduct.ProductColors.RemoveAll(pc => removableColors.Any(rc => pc.Id == rc.Id));
+            foreach (var colorId in product.ColorIds)
+            {
+                ProductColor productColor = existedProduct.ProductColors.FirstOrDefault(fc => fc.ColorId == colorId);
+                if (productColor == null)
+                {
+                    ProductColor pColor = new ProductColor
+                    {
+                        ColorId = colorId,
+                        ProductId = existedProduct.Id
+                    };
+                    existedProduct.ProductColors.Add(pColor);
+                }
+            }
+
+            if (product.SizeIds == null)
+            {
+                ModelState.AddModelError("SizeIds", "Please choose at least one size");
+                return View(existedProduct);
+            }
+
+            List<ProductSize> removableSizes = existedProduct.ProductSizes.Where(pc => !product.SizeIds.Contains(pc.Id)).ToList();
+
+            existedProduct.ProductSizes.RemoveAll(pc => removableSizes.Any(rc => pc.Id == rc.Id));
+            foreach (var sizeId in product.SizeIds)
+            {
+                ProductSize productSize = existedProduct.ProductSizes.FirstOrDefault(fc => fc.SizeId == sizeId);
+                if (productSize == null)
+                {
+                    ProductSize pSize = new ProductSize
+                    {
+                        SizeId = sizeId,
+                        ProductId = existedProduct.Id
+                    };
+                    existedProduct.ProductSizes.Add(pSize);
+                }
+            }
+            if (product.CampaignId == 0)
+            {
+                product.CampaignId = null;
+            }
+
+            existedProduct.BrandId = product.BrandId;
+            existedProduct.CampaignId = product.CampaignId;
+            existedProduct.TagId = product.TagId;
+            existedProduct.Description = product.Description;
+            existedProduct.InStock = product.InStock;
+            existedProduct.IsDeleted = product.IsDeleted;
+            existedProduct.Name = product.Name;
+            existedProduct.Price = product.Price;
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+
+        }
+        public IActionResult Delete(int id)
+        {
+            Product product = _context.Products.FirstOrDefault(c => c.Id == id);
+            Product existedProduct = _context.Products.FirstOrDefault(c => c.Id == product.Id);
+            if (existedProduct == null) return NotFound();
+            if (product == null) return Json(new { status = 404 });
+            _context.Products.Remove(product);
+            _context.SaveChanges();
+            return Json(new { status = 200 });
         }
     }
 }

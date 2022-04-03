@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject FinalProjectBack_Front.Services.LayoutServices layoutService
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -224,16 +225,25 @@
                             <span class="login-reg-pwCloseIcon"><i class="las la-times"></i></span>
                         </div>
                         <div class="registerInputArea">
-                            <form action="post">
-                                <label for="regname">Name</label><br>
-                                <input type="text" id="regname"><br><br>
-                                <label for="regsurname">Surname</label><br>
-                                <input type="text" id="regsurname"><br><br>
-                                <label for="regmail">Email <span>*</span></label><br>
-                                <input id="regmail" type="email"><br><br>
-                                <label for="regpw">Password <span>*</span></label><br>
-                                <input id="regpw" type="password"><br><br>
-                                <button type="submit">REGISTER</button>
+                            <div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+                            <form method="post">
+                                <label asp-for="@layoutService.RegisterVM.Name">Name  <span>*</span></label><br>
+                                <input asp-for="@layoutService.RegisterVM.Name"><br><br>
+                                <label asp-for="@layoutService.RegisterVM.Surname">Surname  <span>*</span></label><br>
+                                <input asp-for="@layoutService.RegisterVM.Surname"><br><br>
+                                <label asp-for="@layoutService.RegisterVM.Username">Username  <span>*</span></label><br>
+                                <input asp-for="@layoutService.RegisterVM.Username"><br><br>
+                                <label asp-for="@layoutService.RegisterVM.Email">Email <span>*</span></label><br>
+                                <input asp-for="@layoutService.RegisterVM.Email"><br><br>
+                                <label asp-for="@layoutService.RegisterVM.TelephoneNumber">Telephone number <span>*</span></label><br>
+                                <input asp-for="@layoutService.RegisterVM.TelephoneNumber"><br><br>
+                                <label asp-for="@layoutService.RegisterVM.Age">Age <span>*</span></label><br>
+                                <input asp-for="@layoutService.RegisterVM.Age"><br><br>
+                                <label asp-for="@layoutService.RegisterVM.Password">Password <span>*</span></label><br>
+                                <input asp-for="@layoutService.RegisterVM.Password"><br><br>
+                                <label asp-for="@layoutService.RegisterVM.ConfirmPassword">Confirm password <span>*</span></label><br>
+                                <input asp-for="@layoutService.RegisterVM.ConfirmPassword"><br><br>
+                                <button asp-controller="account" asp-action="register">REGISTER</button>
                             </form>
                         </div>
                         <p class="logP">Already have an account? <a class="goLogin" href="">Login here</a></p>

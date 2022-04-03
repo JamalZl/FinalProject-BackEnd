@@ -1,4 +1,4 @@
-﻿
+﻿@model HomeVM
 @{
     Layout = null;
 }
@@ -222,16 +222,25 @@
                             <span class="login-reg-pwCloseIcon"><i class="las la-times"></i></span>
                         </div>
                         <div class="registerInputArea">
-                            <form action="post">
-                                <label for="regname">Name</label><br>
-                                <input type="text" id="regname"><br><br>
-                                <label for="regsurname">Surname</label><br>
-                                <input type="text" id="regsurname"><br><br>
-                                <label for="regmail">Email <span>*</span></label><br>
-                                <input id="regmail" type="email"><br><br>
-                                <label for="regpw">Password <span>*</span></label><br>
-                                <input id="regpw" type="password"><br><br>
-                                <button type="submit">REGISTER</button>
+                            <div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+                            <form method="post">
+                                <label asp-for="@Model.RegisterVM.Name">Name  <span>*</span></label><br>
+                                <input asp-for="@Model.RegisterVM.Name"><br><br>
+                                <label asp-for="@Model.RegisterVM.Surname">Surname  <span>*</span></label><br>
+                                <input asp-for="@Model.RegisterVM.Surname"><br><br>
+                                <label asp-for="@Model.RegisterVM.Username">Username  <span>*</span></label><br>
+                                <input asp-for="@Model.RegisterVM.Username"><br><br>
+                                <label asp-for="@Model.RegisterVM.Email">Email <span>*</span></label><br>
+                                <input asp-for="@Model.RegisterVM.Email"><br><br>
+                                <label asp-for="@Model.RegisterVM.TelephoneNumber">Telephone number <span>*</span></label><br>
+                                <input asp-for="@Model.RegisterVM.TelephoneNumber"><br><br>
+                                <label asp-for="@Model.RegisterVM.Age">Age <span>*</span></label><br>
+                                <input asp-for="@Model.RegisterVM.Age"><br><br>
+                                <label asp-for="@Model.RegisterVM.Password">Password <span>*</span></label><br>
+                                <input asp-for="@Model.RegisterVM.Password"><br><br>
+                                <label asp-for="@Model.RegisterVM.ConfirmPassword">Confirm password <span>*</span></label><br>
+                                <input asp-for="@Model.RegisterVM.ConfirmPassword"><br><br>
+                                <button asp-controller="account" asp-action="register">REGISTER</button>
                             </form>
                         </div>
                         <p class="logP">Already have an account? <a class="goLogin" href="">Login here</a></p>
